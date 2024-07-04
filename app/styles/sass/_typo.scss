@@ -17,5 +17,19 @@ body {
   min-width: 320px;
   font-size: 15px;
   line-height: 1.6;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: $grey;
+  background: $lightGrey;
+}
+
+.container {
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    padding: 0 24px;
+  }
+  @include mobile {
+    padding: 0 16px;
+  }
 }

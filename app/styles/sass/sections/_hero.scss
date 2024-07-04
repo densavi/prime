@@ -36,5 +36,33 @@
     justify-content: center;
     margin: 0 0 24px;
     gap: 8px;
+    li {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 13px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border: 1px solid;
+      border-radius: 50px;
+      white-space: nowrap;
+      &:nth-child(1) {
+        color: #0F96E1;
+        border-color: #0F96E1;
+      }
+      &:nth-child(2) {
+        color: #524FDA;
+        border-color: #524FDA;
+      }
+      &:nth-child(3) {
+        color: #E5783A;
+        border-color: #E5783A;
+      }
+      &:nth-child(4) {
+        color: #7A7D97;
+        border-color: #7A7D97;
+      }
+    }
   }
 }

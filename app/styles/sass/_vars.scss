@@ -2,5 +2,27 @@ $grey: #413845;
 $lightGrey: #F3EFF5;
 
 
-$table: 1024px;
+
+
+$tablet: 1024px;
 $mobile: 768px;
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

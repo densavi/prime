@@ -38,6 +38,7 @@
         border-radius: 14px;
         color: #413845;
         transition: background .3s ease;
+        white-space: nowrap;
         &.active,
         &:hover {
           background: #D7D0DB;

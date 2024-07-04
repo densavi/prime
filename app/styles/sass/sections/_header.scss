@@ -12,5 +12,31 @@
     justify-content: space-between;
     position: relative;
   }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    li {
+      a {
+        padding: 0 8px;
+        text-decoration: none;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+        color: #413845;
+        transition: background .3s ease;
+        &.active,
+        &:hover {
+          background: #D7D0DB;
+        }
+      }
+    }
+  }
   
 }

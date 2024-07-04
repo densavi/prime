@@ -1,11 +1,20 @@
 .hero {
   border-bottom: 1px solid #D7D0DB;
   background: url('../images/dist/hero-bg.png') center center / cover;
+  @include mobile {
+    background: url('../images/dist/hero-bg-mobile.png') center center / cover;
+  }
   &__wrap {
     padding: 100px 0;
     max-width: 522px;
     width: 100%;
     margin: 0 auto;
+    @include tablet {
+      padding: 80px 0;
+    }
+    @include mobile {
+      padding: 40px 0;
+    }
   }
 
   &__title {
@@ -15,6 +24,11 @@
     font-size: 60px;
     line-height: 1;
     letter-spacing: -3px;
+    @include mobile {
+      margin-bottom: 16px;
+      font-size: 32px;
+      letter-spacing: inherit;
+    }
   }
 
   &__descr {
@@ -22,11 +36,21 @@
     margin-bottom: 24px;
     font-size: 18px;
     line-height: 26px;
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
+    @media (max-width: 400px) {
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
   }
 
   &__list {
@@ -36,6 +60,10 @@
     justify-content: center;
     margin: 0 0 24px;
     gap: 8px;
+    @include mobile {
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
     li {
       font-weight: 600;
       text-transform: uppercase;

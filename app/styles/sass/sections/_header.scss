@@ -13,6 +13,13 @@
     position: relative;
   }
 
+  &__logo {
+    display: flex;
+    img {
+      width: 89px;
+    }
+  }
+
   &__menu {
     list-style: none;
     display: flex;

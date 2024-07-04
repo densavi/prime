@@ -20,6 +20,9 @@ body {
   color: $grey;
   background: $lightGrey;
   padding-top: 64px;
+  @include mobile {
+    padding-top: 48px;
+  }
 }
 
 .container {

@@ -1,0 +1,25 @@
+.team {
+  padding: 100px 0;
+  background: url('../images/dist/team-background.png') center top no-repeat;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #674278;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 50px;
+    text-transform: capitalize;
+  }
+
+  &__descr {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+  }
+
+}

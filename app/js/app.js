@@ -5,10 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	var swiper = new Swiper(".mySwiper", {
 		loop: false,
-		spaceBetween: 12,
+		spaceBetween: 6,
 		slidesPerView: 5,
 		freeMode: false,
 		watchSlidesProgress: false,
+		breakpoints: {
+			768: {
+				spaceBetween: 12,
+			},
+			
+		},
 	});
 	var swiper2 = new Swiper(".mySwiper2", {
 		loop: false,

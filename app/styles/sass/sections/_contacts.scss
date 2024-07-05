@@ -6,6 +6,9 @@
     border-radius: 8px;
     color: #fff;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   &__img {
@@ -15,5 +18,61 @@
     left: 0;
     max-width: inherit;
     max-height: inherit;
+  }
+
+  &__info,
+  &__form {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #E9E3EC;
+  }
+
+  &__descr {
+    color: #E9E3EC;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  &__wrapper {
+    margin-bottom: 24px;
+    &-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #F3EFF5;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 6px;
+      span {
+        font-size: 11px;
+        color: #F3EFF5;
+      }
+    }
+    input:not(input[type="submit"]),
+    textarea {
+      width: 100%;
+    }
+  }
+
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
   }
 }

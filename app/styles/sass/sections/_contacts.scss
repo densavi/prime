@@ -1,0 +1,9 @@
+.contacts {
+  margin-bottom: 28px;
+  &__wrap {
+    padding: 80px 96px;
+    background: url('../images/dist/contacts-bg.png') center / cover;
+    border-radius: 8px;
+    color: #fff;
+  }
+}

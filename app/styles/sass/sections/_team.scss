@@ -1,6 +1,7 @@
 .team {
   padding: 100px 0;
   background: url('../images/dist/team-background.png') center top / contain no-repeat #F9F5FB;
+  border-top: 1px solid #D7D0DB;
   
   @include tablet {
     padding: 80px 0;

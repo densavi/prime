@@ -1,0 +1,61 @@
+.trading {
+  padding: 0 0 69px;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    color: #674278;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    @include mobile {
+      letter-spacing: 0;
+      margin-bottom: 16px;
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+
+    @media (max-width: 400px) {
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

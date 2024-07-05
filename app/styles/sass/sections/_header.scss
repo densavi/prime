@@ -5,15 +5,19 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
+
   .container {
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+
     @include tablet {
       padding-left: 64px;
     }
+
     @include mobile {
       padding-left: 48px;
       height: 48px;
@@ -22,6 +26,7 @@
 
   &__logo {
     display: flex;
+
     img {
       width: 89px;
     }
@@ -35,9 +40,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
     @include tablet {
       display: none;
     }
+
     li {
       a {
         padding: 0 8px;
@@ -49,6 +56,7 @@
         color: #413845;
         transition: background .3s ease;
         white-space: nowrap;
+
         &.active,
         &:hover {
           background: #D7D0DB;
@@ -56,7 +64,7 @@
       }
     }
   }
-  
+
   &__open-menu {
     display: none;
     position: absolute;
@@ -65,9 +73,62 @@
     left: 12px;
     border: 0;
     background: transparent;
+    width: 36px;
+    height: 36px;
+    background: #E9E3EB;
+    border-radius: 50%;
+
+    span {
+      position: absolute;
+      height: 2px;
+      width: 15px;
+      background: #000;
+      left: 10px;
+      border-radius: 2px;
+      transition: all .3s ease;
+
+      &:nth-child(1) {
+        top: 12px;
+        width: 16px;
+      }
+
+      &:nth-child(2) {
+        top: 18px;
+        width: 11px;
+      }
+
+      &:nth-child(3) {
+        top: 24px;
+        width: 14px;
+      }
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          width: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          width: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
     @include tablet {
       display: flex;
     }
+
     @include mobile {
       width: 36px;
       height: 36px;

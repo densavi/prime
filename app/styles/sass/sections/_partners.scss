@@ -68,6 +68,7 @@
     }
     @include mobile {
       top: 31px;
+      width: 342px;
     }
   }
   &__item {
@@ -75,8 +76,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mobile {
+      height: 48px;
+    }
     img {
       display: flex;
+      @include mobile {
+        max-width: 95%;
+        max-height: 95%;
+      }
     }
   }
 }

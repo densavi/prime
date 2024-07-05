@@ -20,6 +20,42 @@
   &__link {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
   }
 
+}
+
+.mySwiper2 {
+  margin-bottom: 40px;
+  .swiper-slide {
+    height: 480px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+.mySwiper {
+  max-width: 762px;
+  margin: 0 auto;
+  width: 100%;
+  .swiper-slide {
+    height: 88px;
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    cursor: pointer;
+    &.swiper-slide-thumb-active {
+      border-color: #682C83;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 60px;
+    }
+  }
 }

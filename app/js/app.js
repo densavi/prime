@@ -3,6 +3,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
+	var swiper = new Swiper(".mySwiper", {
+		loop: false,
+		spaceBetween: 12,
+		slidesPerView: 5,
+		freeMode: false,
+		watchSlidesProgress: false,
+	});
+	var swiper2 = new Swiper(".mySwiper2", {
+		loop: false,
+		spaceBetween: 10,
+		thumbs: {
+			swiper: swiper,
+		},
+	});
 
 })

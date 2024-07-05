@@ -172,11 +172,30 @@
     display: grid;
     grid-template-columns: auto 127px 127px 127px;
     gap: 8px;
+    @include tablet {
+      margin: 0 auto;
+    }
+    @include mobile {
+      height: auto;
+      padding: 16px;
+      background: url('../images/dist/contacts-foot-mobile.png') center / cover;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      width: 100%;
+    }
     span {
       color: #491361;
       font-size: 15px;
       line-height: 20px;
       font-weight: bold;
+      @include mobile {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 16px;
+        br {
+          display: none;
+        }
+      }
     }
     a {
       display: flex;
@@ -189,12 +208,24 @@
       padding: 0 8px;
       text-decoration: none;
       transition: background .3s ease;
+      @include mobile {
+        grid-column: span 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        text-align: center;
+      }
       &:hover {
         background: rgba(#491361, .32);
       }
       img {
         display: flex;
         margin-right: 4px;
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 4px;
+        }
       }
     }
   }
